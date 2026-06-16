@@ -81,6 +81,6 @@ I build tools that fix that. Free. Accessible. In their language.
 
 **If any of my tools helped you — drop a ⭐ on the repo. It means a lot.**
 
-![Visitor Count](https://visitor-badge.liter.workers.dev/badge?page_id=princemittalr.princemittalr)
+![Profile Views](https://komarev.com/ghpvc/?username=princemittalr&color=brightgreen&style=flat)
 
 </div>
