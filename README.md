@@ -1,202 +1,61 @@
-<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:3B2A7A,100:00D9FF&height=220&section=header&text=Prince%20Mittal&fontSize=72&fontColor=FFFFFF&fontAlignY=38&desc=AI%20Builder%20%E2%80%A2%20Social%20Impact%20Engineer&descSize=20&descAlignY=58&animation=fadeIn" width="100%" alt="header"/>
+# Prince Mittal
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=00D9FF&center=true&vCenter=true&width=640&lines=%3E+Building+AI+that+reaches+everyone_;%3E+LLM+Agents+%7C+Evals+%7C+Observability_;%3E+Shipping+tools+in+English%2C+Hindi+%26+Tamil_;%3E+B.Tech+CSE+(AI%2FML)+%40+DSU+Bengaluru_" alt="Typing SVG" />
-</a>
+Building LLM systems — from GPU kernels to products.
 
-<br/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=3500&pause=1500&color=8B949E&center=true&vCenter=true&width=520&height=24&lines=inference+engines+%C2%B7+agent+infrastructure+%C2%B7+open+source" alt="inference engines · agent infrastructure · open source" />
 
-<a href="https://linkedin.com/in/princemittalr"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="mailto:prince.mittal.work@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-<a href="https://tn-scholarship-finder.streamlit.app"><img src="https://img.shields.io/badge/Live_Apps-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live Apps"/></a>
-<a href="https://github.com/princemittalr?tab=repositories"><img src="https://img.shields.io/badge/Repos-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repos"/></a>
-
-<br/><br/>
-
-<img src="https://komarev.com/ghpvc/?username=princemittalr&label=PROFILE+VIEWS&color=00D9FF&style=flat-square" alt="Profile views"/>
-<img src="https://img.shields.io/github/followers/princemittalr?label=FOLLOWERS&style=flat-square&color=7F5AF0&labelColor=0D1117" alt="Followers"/>
-<img src="https://img.shields.io/badge/STATUS-BUILDING-00C853?style=flat-square&labelColor=0D1117" alt="Status"/>
+[LinkedIn](https://www.linkedin.com/in/princemittalr/) &nbsp;·&nbsp; [Hugging Face](https://huggingface.co/princemittalr) &nbsp;·&nbsp; [Kaggle](https://www.kaggle.com/princemittalr) &nbsp;·&nbsp; Bengaluru, India
 
 </div>
 
-<!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+<br>
 
-## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> `whoami`
+I work across the LLM stack: writing inference engines and Triton kernels, building evaluation and observability tooling for agents, and shipping the products on top. I'm a CS student at Dayananda Sagar University, and I contribute upstream to Google ADK, MuJoCo Warp, Kubeflow, OpenPrinting and openSUSE.
 
-```python
-class PrinceMittal:
-    def __init__(self):
-        self.role       = "AI Builder · Social Impact Engineer"
-        self.education  = "B.Tech CSE (AI/ML) @ Dayananda Sagar University, Bengaluru"
-        self.building   = ["LLM agents", "AI observability & evals", "civic-tech tools"]
-        self.learning   = ["LLM APIs", "Prompt Engineering", "Agent pipelines"]
-        self.code       = ["Python", "TypeScript", "C"]
-        self.speaks     = {"Hindi": "native", "English": "fluent", "Tamil": "conversational"}
-        self.goal       = "Claude Corps Fellow 2026 🎯"
+<br>
 
-    def mission(self) -> str:
-        return (
-            "Give AI access to people who never had it — first-gen students, "
-            "rural communities, anyone who can't afford a consultant. "
-            "Free. Accessible. In their language."
-        )
+### Selected work
 
-me = PrinceMittal()
-print(me.mission())
-```
+| | |
+|:--|:--|
+| **[tinyserve](https://github.com/princemittalr/tinyserve)** | From-scratch LLM inference engine for a free T4 — paged KV cache, continuous batching, radix prefix cache, custom Triton paged-attention kernels, CUDA graphs. **4.98× HF `generate()` throughput** at 32 concurrent requests, token-identical in fp32. |
+| **[agentlens](https://github.com/princemittalr/agentlens)** | Observability and evaluation for LLM agents — traces any pipeline, scores runs with LLM judges, flags prompt regressions and clusters failures. |
+| **[driftwatch](https://github.com/princemittalr/driftwatch)** | Multi-agent system that correlates repo and dependency signals across three tiers of Nemotron models and files a ranked action plan as GitHub issues. |
+| **[ai-audit-platform](https://github.com/princemittalr/ai-audit-platform)** | CLI that resolves the import graph of TS/React/Next.js repos, finds real circular dependencies and dead code, and exports scored reports. |
+| **[verdantix](https://github.com/princemittalr/verdantix)** | AI digital twin of the DSU Harohalli campus — detects energy, water and waste issues, routes them to teams, and closes jobs only on photo proof of the fix. FastAPI · Gemini · MapLibre · Android. |
+| **[arogyaos](https://github.com/princemittalr/arogyaos)** | Healthcare operations platform for hospitals, pharmacies and district health teams. Next.js · Firebase · Gemini. |
+| **[paybackai](https://github.com/princemittalr/paybackai)** | Autonomous agent for payment-failure recovery, built at the Razorpay AI Buildathon. |
 
-<!-- ═══════════════════════════ FLAGSHIP ═══════════════════════════ -->
+<sub>Also: [scholarship finder](https://github.com/princemittalr/tn-scholarship-finder) · [multilingual PDF chat](https://github.com/princemittalr/pdf-chat-ai) · [NGO field-report analyzer](https://github.com/princemittalr/ngo-analyzer) · [placement readiness coach](https://github.com/princemittalr/placement-readiness-analyzer)</sub>
 
-## ⚡ Flagship Builds
+<br>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+### Open source
 
-### 🔭 [AgentLens](https://github.com/princemittalr/agentlens)
-Production-grade **observability & eval platform for LLM agents** — traces any agent pipeline, auto-evaluates with LLM judges, catches prompt regressions and clusters failures visually.
+| Project | Merged contributions |
+|:--|:--|
+| **Google DeepMind · MuJoCo Warp** | [Fix flex element contact id for non-first flexes](https://github.com/google-deepmind/mujoco_warp/pull/1741) |
+| **Google · ADK Python** | [Model Armor `after_tool_callback` to screen tool output](https://github.com/google/adk-python/pull/6969) |
+| **Kubeflow** | [Accept bracketed IPv6 registry hosts](https://github.com/kubeflow/mcp-server/pull/443) · [Stop `restrictToOrg` mutating shared catalog state](https://github.com/kubeflow/hub/pull/3364) |
+| **OpenPrinting** | [Back pages rotated 180° in long-edge duplex](https://github.com/OpenPrinting/libcupsfilters/pull/265) · [Honor `print-scaling=none` with annotations](https://github.com/OpenPrinting/libcupsfilters/pull/269) · [pdfio as public pkg-config dependency](https://github.com/OpenPrinting/libcupsfilters/pull/219) · [Memory leaks in `fuzz_ppd`](https://github.com/OpenPrinting/fuzzing/pull/59) |
+| **openSUSE** | [mtui](https://github.com/openSUSE/mtui/pulls?q=is%3Apr+author%3Aprincemittalr+is%3Amerged) — openQA export & job filters (3) · [docbuild](https://github.com/openSUSE/docbuild/pulls?q=is%3Apr+author%3Aprincemittalr+is%3Amerged) — shell completion, portal dedup (2) |
+| **OpenCV Zoo** | [Typo fix across demo files](https://github.com/opencv/opencv_zoo/pull/315) |
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![LLM](https://img.shields.io/badge/LLM_Evals-7F5AF0?style=flat-square)
+<br>
 
-</td>
-<td width="50%" valign="top">
+### Stack
 
-### 🧪 [AI Audit Platform](https://github.com/princemittalr/ai-audit-platform)
-CLI that **audits TypeScript / React / Next.js repos** — resolves the import graph, finds real circular deps & dead code, scores the repo, exports JSON/HTML/PDF + LLM-ready prompts.
+| | |
+|:--|:--|
+| **Languages** | Python · TypeScript · C |
+| **ML systems** | PyTorch · Hugging Face Transformers · Triton · CUDA graphs |
+| **LLMs & agents** | Gemini · Claude · Nemotron · Google ADK · LLM-as-judge evals |
+| **Product** | FastAPI · Next.js · React · Firebase · Streamlit · Vercel |
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![CLI](https://img.shields.io/badge/CLI-0D1117?style=flat-square&logo=gnubash&logoColor=white)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🏥 [ArogyaOS](https://github.com/princemittalr/arogyaos)
-AI-powered **Healthcare Operating System** for hospital, pharmacy and district-level health management.
-
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)
-
-</td>
-<td width="50%" valign="top">
-
-### 💸 [PaybackAI](https://github.com/princemittalr/paybackai)
-**Autonomous AI agent for payment-failure recovery** — built for the Razorpay AI Buildathon.
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Agents](https://img.shields.io/badge/AI_Agent-00D9FF?style=flat-square&logoColor=black)
-![Hackathon](https://img.shields.io/badge/Buildathon-02042B?style=flat-square&logo=razorpay&logoColor=3395FF)
-
-</td>
-</tr>
-</table>
-
-<!-- ═══════════════════════════ LIVE TOOLS ═══════════════════════════ -->
-
-## 🌍 Live Tools — Used by Real People
-
-| | Project | What it does | Try it |
-|:-:|---|---|:-:|
-| 🎓 | **TN Scholarship Finder** | Finds government scholarships for TN engineering students — in **English, Tamil & Hindi** | [![Open](https://img.shields.io/badge/▶_Launch-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://tn-scholarship-finder.streamlit.app) |
-| 🎯 | **[Placement Readiness Analyzer](https://github.com/princemittalr/placement-readiness-analyzer)** | Brutally honest AI placement coach — readiness score, mock interviews, roadmap, ATS resume check | [![Open](https://img.shields.io/badge/▶_Launch-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://placement-readiness-analyzer.streamlit.app) |
-| 📄 | **PDF Chat AI** | Upload any PDF, ask questions, get plain-language answers instantly | [![Open](https://img.shields.io/badge/▶_Launch-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://pdfchat-ai.streamlit.app) |
-
-<!-- ═══════════════════════════ TECH STACK ═══════════════════════════ -->
-
-## 🛠️ Tech Arsenal
+<br>
 
 <div align="center">
-
-**Languages & Frameworks**
-
-<img src="https://skillicons.dev/icons?i=python,ts,js,c,react,nextjs,nodejs,firebase&theme=dark" alt="languages"/>
-
-**Tools**
-
-<img src="https://skillicons.dev/icons?i=git,github,vscode,linux,vercel&theme=dark" alt="tools"/>
-
-**AI / LLM**
-
-![Claude](https://img.shields.io/badge/Claude_API-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Prompt Engineering](https://img.shields.io/badge/Prompt_Engineering-0D1117?style=for-the-badge&logo=openai&logoColor=00D9FF)
-
-</div>
-
-<!-- ═══════════════════════════ STATS ═══════════════════════════ -->
-
-## 📊 GitHub Analytics
-
-<div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=princemittalr&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=7F5AF0&include_all_commits=true&count_private=true" alt="stats"/>
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=princemittalr&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&langs_count=6" alt="top langs"/>
-
-<img src="https://streak-stats.demolab.com?user=princemittalr&theme=tokyonight&hide_border=true&background=0D1117&ring=00D9FF&fire=7F5AF0&currStreakLabel=00D9FF" alt="streak" width="80%"/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=princemittalr&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=00D9FF&line=7F5AF0&point=FFFFFF&area=true" alt="activity graph" width="100%"/>
-
-</div>
-
-<!-- ═══════════════════════════ CERTS ═══════════════════════════ -->
-
-## 🏅 Certifications & Achievements
-
-<div align="center">
-
-![Anthropic AI Fluency](https://img.shields.io/badge/Anthropic-AI_Fluency_·_2026-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![Claude 101](https://img.shields.io/badge/Anthropic-Claude_101_·_2026-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![Infosys](https://img.shields.io/badge/Infosys_Springboard-Programming_in_C-007CC3?style=for-the-badge&logo=infosys&logoColor=white)
-![Pull Shark](https://img.shields.io/badge/GitHub-Pull_Shark_🦈-181717?style=for-the-badge&logo=github&logoColor=white)
-
-</div>
-
-<!-- ═══════════════════════════ PHILOSOPHY ═══════════════════════════ -->
-
-## 💭 What Drives Me
-
-<div align="center">
-
-> ### *"The most powerful thing you can give someone is not code —*
-> ### *it's the belief that they can understand it."*
-
-</div>
-
-```diff
-- First-gen students miss scholarships they already qualify for.
-- Students fail placements not for lack of ability, but lack of guidance.
-- People can't navigate documents written for bureaucrats, not humans.
-+ I build tools that fix that. Free. Accessible. In their language.
-```
-
-<!-- ═══════════════════════════ SNAKE ═══════════════════════════ -->
-
-## 🐍 Contribution Snake
-
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/princemittalr/princemittalr/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/princemittalr/princemittalr/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/princemittalr/princemittalr/output/github-contribution-grid-snake-dark.svg" />
-</picture>
-</div>
-
-<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-
-<div align="center">
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=4000&pause=1000&color=7F5AF0&center=true&vCenter=true&width=520&lines=If+any+of+my+tools+helped+you+%E2%80%94+drop+a+%E2%AD%90;Open+to+collaborations+%26+internships+%F0%9F%A4%9D" alt="footer typing"/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,50:3B2A7A,100:0D1117&height=120&section=footer" width="100%" alt="footer"/>
-
+<sub>Always happy to talk inference, agents, or a good bug</sub>
 </div>
