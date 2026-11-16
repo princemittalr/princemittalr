@@ -31,8 +31,8 @@ PORTRAIT = os.path.join(ROOT, "prince-ascii.svg")
 # ---- hand-set numbers (update these when they change) ---------------------------
 USER = "princemittalr"
 THROUGHPUT = "4.98x"     # tinyserve vs HF generate() at 32 concurrent requests
-MERGED_PRS = "14"        # merged upstream PRs listed in the open-source table
-PRODUCTS = "7"           # products in "Selected work"
+MERGED_PRS = "18"        # merged upstream code PRs in the README table (excl. the opencv_zoo typo fix and ItsMeAaryan/*)
+PRODUCTS = "7"           # own projects: agentcheck, agentlens, verdantix, ai-audit-platform, driftwatch, repro, paybackai
 
 # ---- brand tokens -----------------------------------------------------------
 PAPER = "#f3f3f1"
@@ -178,12 +178,12 @@ def hero():
 <rect width="{W}" height="{h}" rx="14" fill="{PAPER}"/>
 <g class="f" {d(0)}>
   <rect class="live" x="48" y="49" width="8" height="8" rx="2" fill="{TECH}"/>
-  <text x="66" y="57" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{MUTED}">LLM SYSTEMS ENGINEER · BENGALURU</text>
+  <text x="66" y="57" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{MUTED}">B.TECH CSE STUDENT · BENGALURU</text>
 </g>
 <text class="r" {d(0.15)} x="44" y="190" font-family="{SERIF}" font-size="116" letter-spacing="-2.5" fill="{INK}">Prince</text>
 <text class="r" {d(0.3)} x="44" y="290" font-family="{SERIF}" font-style="italic" font-size="116" letter-spacing="-2.5" fill="url(#shine)">Mittal</text>
 <g class="r" {d(0.55)}>
-  {text_lines(48, 338, ["I build LLM systems, from GPU kernels", "to the products that run on top of them."], 27, f'font-family="{SANS}" font-size="18" fill="{INK_SOFT}"')}
+  {text_lines(48, 338, ["CS student learning how LLMs are served.", "I fix bugs upstream, mostly in openSUSE."], 27, f'font-family="{SANS}" font-size="18" fill="{INK_SOFT}"')}
 </g>
 <g class="f" {d(0.8)}>
   <text x="48" y="396" font-family="{MONO}" font-size="13" fill="{INK}">huggingface.co/princemittalr</text>
@@ -194,7 +194,7 @@ def hero():
 </g>
 """
     write("hero.svg", svg(W, h, body, ["serif", "serif-i", "sans", "mono"],
-                          "Prince Mittal. LLM systems engineer in Bengaluru. I build LLM systems, from GPU kernels to the products that run on top of them."))
+                          "Prince Mittal. B.Tech CSE student in Bengaluru, learning how LLMs are served and fixing bugs upstream, mostly in openSUSE."))
 
 
 # ---- 2 · world tiles ----------------------------------------------------------
@@ -318,11 +318,13 @@ def activity(data):
 REPO_W, REPO_H = 880 / 3 - 8, 176
 REPOS = [
     ("tinyserve", "From-scratch LLM inference engine for a free T4: paged KV cache, Triton kernels, CUDA graphs.", "Python", TECH),
-    ("agentlens", "Observability and evals for LLM agents: traces, LLM judges, prompt regressions.", "Python", STUDIO),
-    ("driftwatch", "Multi-agent system on Nemotron that files a ranked action plan as GitHub issues.", "Python", LEARN),
-    ("ai-audit-platform", "CLI that maps the import graph of TS/React/Next.js repos and finds dead code.", "TypeScript", TECH),
-    ("verdantix", "AI digital twin of the DSU Harohalli campus. Closes jobs only on photo proof.", "Python", STUDIO),
-    ("arogyaos", "Healthcare operations for hospitals, pharmacies and district health teams.", "TypeScript", LEARN),
+    ("agentcheck", "Statistical regression checks for LLM agent evals, built on Inspect.", "Python", STUDIO),
+    ("verdantix", "AI digital twin of the DSU Harohalli campus. Closes jobs only on photo proof.", "Python", LEARN),
+    # row 2: upstream orgs (red = the UPSTREAM world). The "lang" slot shows the repos instead;
+    # repo_stars() gets a 404 for these names and simply shows no stars.
+    ("openSUSE", "9 merged PRs: openQA job listing in mtui, docbuild fixes, osc-mcp password decoding.", "mtui · docbuild · osc-mcp", STUDIO),
+    ("OpenPrinting", "4 merged PRs: pdftopdf duplex and scaling fixes, a fuzzer leak fix, pkg-config deps.", "libcupsfilters · fuzzing", STUDIO),
+    ("Kubeflow", "2 merged PRs: a shared-state bug in the hub catalog, IPv6 registry hosts in mcp-server.", "hub · mcp-server", STUDIO),
 ]
 
 
@@ -343,13 +345,13 @@ def repo_card(i, name, desc, lang, color, stars):
                                   left=4 * i, right=8 - 4 * i))
 
 
-def section_title(text, italic, theme):
+def section_title(text, italic, theme, slug="building"):
     fg = "#e6edf3" if theme == "dark" else INK
     body = (
         f'<text class="r" {d(4.4)} x="2" y="46" font-family="{SERIF}" font-size="34" fill="{fg}">{escape(text)} '
         f'<tspan font-style="italic">{escape(italic)}</tspan></text>'
     )
-    write(f"title-building-{theme}.svg", svg(W, 64, body, ["serif", "serif-i"], f"{text} {italic}", bottom=0))
+    write(f"title-{slug}-{theme}.svg", svg(W, 64, body, ["serif", "serif-i"], f"{text} {italic}", bottom=0))
 
 
 # ---- 5 · blue contribution graph -----------------------------------------------
@@ -426,13 +428,15 @@ if __name__ == "__main__":
     tile("build", "BUILD", TECH, "#ffffff", THROUGHPUT, "faster",
          "tinyserve vs HF generate() on a free T4, token-identical in fp32.", 3.1, 0)
     tile("upstream", "UPSTREAM", STUDIO, "#ffffff", MERGED_PRS, "merged PRs",
-         "Fixes in MuJoCo Warp, Google ADK, Kubeflow, OpenPrinting, openSUSE.", 3.35, 1)
-    tile("ship", "SHIP", LEARN, INK, PRODUCTS, "products",
-         "Agents, evals and AI products, from hospitals to campus twins.", 3.6, 2)
+         "Fixes in openSUSE, OpenPrinting, Kubeflow, Keras and MuJoCo Warp.", 3.35, 1)
+    tile("ship", "SHIP", LEARN, INK, PRODUCTS, "projects",
+         "Agents, evals, dev tools and a campus digital twin.", 3.6, 2)
     activity(data)
     stars = repo_stars()
     for i, (name, desc, lang, color) in enumerate(REPOS):
         repo_card(i, name, desc, lang, color, stars.get(name, 0))
     section_title("What I'm", "building", "dark")
     section_title("What I'm", "building", "light")
+    section_title("Where I", "contribute", "dark", "upstream")
+    section_title("Where I", "contribute", "light", "upstream")
     heatmap(data)
